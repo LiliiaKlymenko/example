@@ -5,7 +5,8 @@ import org.junit.runners.Parameterized;
 import java.util.Arrays;
 import java.util.Collection;
 
-import static junit.framework.Assert.assertTrue;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.core.Is.is;
 
 /**
  * Created by Liliia_Klymenko on 13-May-15.
@@ -37,19 +38,19 @@ public class TestSorts {
     @Test
     public void testBubbleSort() {
         Sorts.bubbleSort(actualArray);
-        assertTrue(Arrays.equals(expectedArray, actualArray));
+        assertThat(actualArray, is(expectedArray));
     }
 
     @Test
     public void testSelectionSort() {
         Sorts.selectionSort(actualArray);
-        assertTrue(Arrays.equals(expectedArray, actualArray));
+        assertThat(actualArray, is(expectedArray));
     }
 
     @Test
     public void testInsertionSort() {
         Sorts.insertionSort(actualArray);
-        assertTrue(Arrays.equals(expectedArray, actualArray));
+        assertThat(actualArray, is(expectedArray));
     }
 
 
